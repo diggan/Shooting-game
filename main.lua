@@ -10,16 +10,12 @@ function love.load()
     --love.graphics.setMode( 0, 0, true, true, 0 )
     shot = love.audio.newSource("audio/barret50.wav", "static")
     empty = love.audio.newSource("audio/empty.wav", "static")
-    --music = love.audio.newSource("audio/song.ogg")
-    --music:setVolume(0.2)
-    --love.audio.play(music)
     lastshot = 10
     ammo = 5
     score = 0;
 end
 
 function love.draw()
-	-- Gets the x- and y-posi	tion of the mouse.
 	love.graphics.setColor(255, 0, 0)
 	love.graphics.circle("fill", 300, 300, 100, 32)
 	love.graphics.setColor(255, 255, 255)
@@ -33,7 +29,6 @@ function love.draw()
 	love.graphics.setColor(255, 255, 255, 255)
 	x = love.mouse.getX() - 125
 	y = love.mouse.getY() - 125
-	-- Draws the position on screen.
 	love.graphics.print("The mouse is at (" .. x .. "," .. y .. ")", 50, 50)
 	love.graphics.print("Ammo: " .. ammo, 50, 75)
 	love.graphics.print("Score: " .. score, 50, 125)
